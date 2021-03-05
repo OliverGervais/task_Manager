@@ -18,7 +18,7 @@ class App extends React.Component {
   };
 
   getTask = () => {
-    axios.get("https://ollytask.herokuapp.com/api")
+    axios.get("/api")
       .then((response) =>{
         const data = response.data;
         this.setState({ tasks: data })
@@ -44,7 +44,7 @@ class App extends React.Component {
 
     
     axios({
-      url: `https://ollytask.herokuapp.com/api/del/${id}`,
+      url: `/api/del/${id}`,
       method: "DELETE"
     })
     .then(() => {
@@ -66,7 +66,7 @@ class App extends React.Component {
       date:this.state.date,
     };
     axios({
-      url: "https://ollytask.herokuapp.com/api/update",
+      url: "/api/update",
       method: "PUT",
       data: payload
     })
@@ -89,7 +89,7 @@ class App extends React.Component {
       reminder:reminder,
     };
     axios({
-      url: "https://ollytask.herokuapp.com/api/reminder",
+      url: "/api/reminder",
       method: "PUT",
       data: payload
     })
