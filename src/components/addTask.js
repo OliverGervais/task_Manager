@@ -50,7 +50,7 @@ export default class AddTask extends Component {
           reminder:this.state.reminder
         };
         axios({
-          url: "/api/save",
+          url: "https://ollytask.herokuapp.com/api/save",
           method: "POST",
           data: payload
         })
