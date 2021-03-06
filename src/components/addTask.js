@@ -68,11 +68,11 @@ export default class AddTask extends Component {
 
     render() {
         return (
-            <div>
-                <form className="grid grid-cols-4 gap-1" onSubmit={this.submit}>
-                    <div className="flex-1 col-start-1 place-self-start md:place-self-center md:col-start-2">
-                        <div className= "flex-auto">
-                            <input 
+            <>
+            <form className="bg-newblue border-newgreen rounded-lg md:px-4 py-4 mb-2 md:mx-20 lg:mx-36 xl:mx-56 2xl:mx-96 mt-2 grid grid-flow-col grid-cols-2 grid-rows-2 gap-2" onSubmit={this.submit}>
+                  
+                  
+                        <input 
                             className=" text-xl font-bold px-4 py-2 rounded-lg font-serif bg-newblue border-2 border-back"
                             type="text"
                             name= "text"
@@ -80,22 +80,18 @@ export default class AddTask extends Component {
                             placeholder="Name of your task"
                             onChange={this.handleChange}
                             />
-                            </div>
-                            <div className="flex-auto">
-                                
-                                <input 
+               
+                 
+                            <input 
                                 className="w-1/2 sm:w-full text-xl font-bold  px-4 py-2 my-2 bg-newgreen rounded-lg text-back font-serif bg-newblue border-2 border-back"
                                 type="datetime-local"
                                 name= "date"
                                 value={this.state.date}
                                 placeholder="DD-MM-YYYY HH:MM"
                                 onChange={this.handleChange}/>
-                                
-                                </div>
-                                </div>
-                                <div className="flex-1 place-self-end col-start-4 md:place-self-center md:col-start-3 ">
-                                    <div className="flex-auto bg-newgreen md:px-4 md:py-2 my-1 rounded-lg font-serif bg-newblue border-2 border-back">
-                                        <input 
+                                <div className=" mx-auto  md:px-4 md:py-2 my-1 rounded-lg font-serif ">
+                                  
+                                    <input 
                                         className="mt-1 "
                                         type="checkbox"
                                         name= "reminder"
@@ -103,12 +99,11 @@ export default class AddTask extends Component {
                                         onChange={this.handleChangeReminder}/>
                                         <label className="font-serif mx-3 text-back text-xl font-bold">Task Done?</label>
                                         </div>
-                                        <div className="grid grid-cols-1 gap-1">
-                                            <button className="flex-automb-1 px-4 py-2 hover:bg-newgreen hover:border-back  rounded-lg font-serif bg-back border-2 border-newblue text-newblue font-black text-xl">Submit</button>
-                                            </div>
-                                            </div>
-                                            </form>
-                                            </div>
+                            
+                                        <button className="flex-automb-1 px-4 py-2 hover:bg-newgreen hover:border-back  rounded-lg font-serif bg-back border-2 border-newblue text-newblue font-black text-xl">Submit</button>
+                             
+                                  </form>
+                                            </>
                                             )
                                         }
                                     }
