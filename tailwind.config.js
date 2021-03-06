@@ -12,7 +12,12 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
+
+    extend:{
     colors: {
+      newgreen:"#EE2737FF",
+      newblue:"#643E46FF",
+      back:"#BA0020FF",
       transparent: 'transparent',
       current: 'currentColor',
 
@@ -27,6 +32,7 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
     },
+  },
     spacing: {
       px: '1px',
       0: '0px',

@@ -116,30 +116,30 @@ class App extends React.Component {
     if (!tasks.length) return null;
 
     return tasks.map((task, index) => (
-      <div key={index} className="w-screen md:max-w-max  grid grid-cols-3 gap-2 place-self-center col-start-2 bg-green-100 px-4 py-2 rounded-lg  border-double border-4 border-blue-500">
+      <div key={index} className="w-screen md:max-w-max  grid grid-cols-3 gap-2 place-self-center col-start-2 px-4 py-2  rounded-lg font-serif bg-newblue border-2 border-back">
         <div className="flex-1">
-        <h3 className="flex col-start-1 ">{task.text}</h3>
+        <h3 className="flex col-start-1 text-xl font-bold ">{task.text}</h3>
         <button 
         onClick={() => this.updateDone(task._id, task.reminder)}  
-        className="bg-green-100 my-1 p-1 rounded-lg  border-double border-4 border-blue-500">
-        {task.reminder === true ?<p className="flex">Done</p>:<p className="flex">Not Done</p> }
+        className="my-1 p-1 rounded-lg  ">
+        {task.reminder === true ?<p className="flex p-1 rounded-lg text-back bg-newblue border-2 border-newgreen  font-black text-xl animate-bounce">Done</p>:<p className=" font-black text-xl flex p-1 rounded-lg text-newblue bg-newgreen border-2 border-back">Not Done</p> }
         </button>
         </div>
         <div className="flex-1">
-        <p className="col-start-2 flex">
+        <p className="col-start-2 flex text-xl font-bold ">
         {moment(task.date).format("lll")}</p>
         <input 
-        className="flex w-full bg-green-100 p-1  rounded-lg  border-double border-4 border-blue-500" 
+        className="flex w-full p-1 text-xl font-bold  bg-newgreen rounded-lg text-back font-serif bg-newblue border-2 border-back" 
         type="datetime-local" 
         placeholder="Edit date" 
         name="date"
         value={this.state.date} 
         onChange={this.handleChangeUpdate}/>
-        <button  onClick={() => this.updateDay(task._id)} className="bg-green-100 my-1 p-1 rounded-lg  border-double border-4 border-blue-500">
+        <button  onClick={() => this.updateDay(task._id)} className="bg-newgreen my-1 p-1 hover:bg-newgreen hover:border-back  rounded-lg font-serif bg-back border-2 border-newblue text-newblue  font-black text-xl">
         Update
         </button>
         </div>
-        <button onClick={() => this.delete(task._id)} className="grid grid-cols-3 gap-1 col-start-3 bg-green-100  rounded-lg  border-double border-4 border-blue-500">          
+        <button onClick={() => this.delete(task._id)} className="grid grid-cols-3 gap-1 col-start-3 hover:bg-newgreen hover:border-back  rounded-lg font-serif bg-back border-2 border-newblue text-newblue font-black text-3xl">          
           <p className="place-self-center col-start-2">Delete</p>
           </button>
       </div>
@@ -152,7 +152,7 @@ class App extends React.Component {
     //JSX
     return(
    
-      <div className="bg-green-100">
+      <div className="bg-gradient-to-t from-newgreen via-back to-newblue h-screen">
         <div className= "grid grid-cols-3 gap-2">
         <h1 className="place-self-center col-start-2">Task Manager</h1>
         </div>
