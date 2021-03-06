@@ -152,10 +152,11 @@ class App extends React.Component {
     //JSX
     return(
    
-      <div className="bg-gradient-to-t from-newgreen via-back to-newblue h-screen">
-        <div className= "grid grid-cols-3 gap-2">
-        <h1 className="place-self-center col-start-2">Task Manager</h1>
+      <div className="bg-gradient-to-t from-newgreen via-back to-newblue h-full">
+        <div className="grid grid-cols-1">
+        <img className="place-self-center col-start-1 w-60"  src="logo.png" />
         </div>
+        
        <AddTask/>
         <div className="grid grid-cols-3 gap-2">
           {this.displayTask(this.state.tasks)}
